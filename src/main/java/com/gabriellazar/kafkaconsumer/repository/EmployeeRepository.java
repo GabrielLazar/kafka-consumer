@@ -37,10 +37,9 @@ public class EmployeeRepository implements IEmployeeRepository {
             param.put("departmentId", employee.getDepartmentId());
             namedParameterJdbcTemplate.update(INSERT_EMPLOYEE, param);
         } catch (DataAccessException e) {
-            log.error("Error saving employee :: {} DataAccessException is :: {}",employee,e);
+            log.error("Error saving employee :: {} DataAccessException is :: {}", employee, e);
         }
 
     }
-
 
 }
